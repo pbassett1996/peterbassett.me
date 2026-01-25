@@ -1,0 +1,37 @@
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.timeline-marker {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  width: 28px;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff595e;
+  border: 3px solid #111111;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.timeline-line {
+  width: 4px;
+  background: #111111;
+  margin-top: 0.4rem;
+}
+
+.timeline-card {
+  position: relative;
+}

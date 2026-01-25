@@ -1,0 +1,56 @@
+.nb-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.nb-modal-card {
+  background: #b7a2b6;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 #111111, 4px 4px 0 #111111, 4px 4px 0 #111111;
+  width: min(600px, 92vw);
+  max-height: 80vh;
+  overflow: auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.nb-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nb-modal-title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.nb-modal-close {
+  border: 2px solid #111111;
+  background: #ffffff;
+  color: #111111;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-weight: 800;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.nb-modal-close:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.nb-modal-body {
+  display: grid;
+  gap: 1rem;
+}

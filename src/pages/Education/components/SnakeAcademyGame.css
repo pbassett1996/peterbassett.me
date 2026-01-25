@@ -1,0 +1,276 @@
+.snake-game {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.snake-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.snake-title {
+  margin: 0;
+}
+
+.snake-meta {
+  background: #111111;
+  color: #ffffff;
+  padding: 0.35rem 0.7rem;
+  border: 2px solid #111111;
+  font-size: 0.7rem;
+}
+
+.snake-instructions {
+  margin: 0;
+  font-weight: 600;
+}
+
+.snake-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 4px;
+  padding: 0.5rem;
+  background: #111111;
+  border: 3px solid #111111;
+}
+
+.snake-cell {
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  border: 2px solid #111111;
+  display: grid;
+  place-items: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.snake-body {
+  background: #ff8ddb;
+}
+
+.snake-head {
+  background: #ffe29a;
+}
+
+.snake-node {
+  background: #9bf6ff;
+}
+
+.snake-panel {
+  display: grid;
+  gap: 0.4rem;
+  border-top: 2px dashed #111111;
+  padding-top: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.snake-panel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.snake-panel-label {
+  letter-spacing: 0.06em;
+}
+
+.snake-panel-value {
+  text-transform: none;
+  font-weight: 600;
+  text-align: right;
+}
+
+.snake-panel-list {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.5rem;
+  text-transform: none;
+  font-weight: 600;
+  min-height: 0;
+}
+
+.snake-panel-list span {
+  text-align: left;
+}
+
+.snake-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  display: grid;
+  gap: 0.65rem;
+  position: relative;
+}
+
+.snake-timeline li {
+  position: relative;
+  padding: 0.1rem 0.6rem;
+  text-align: left;
+}
+
+.snake-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -0.85rem;
+  top: 0.6rem;
+  width: 10px;
+  height: 10px;
+  background: #ff8ddb;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0 #111111;
+}
+
+.snake-panel-scroll {
+  height: 100%;
+  padding-right: 0.25rem;
+  overflow: auto;
+  min-height: 0;
+  scrollbar-width: none;
+}
+
+.snake-panel-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.snake-scroll-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 12px;
+  gap: 0.5rem;
+  height: 100%;
+  min-height: 0;
+}
+
+.snake-scroll-rail {
+  border: 2px solid #111111;
+  background: #ffffff;
+  box-shadow: inset 2px 2px 0 #111111;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.snake-scroll-thumb {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #111111;
+  box-shadow: 2px 2px 0 #111111;
+}
+
+.snake-pop {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0 #111111;
+  padding: 0.35rem 0.6rem;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  animation: snake-pop 1200ms ease-out forwards;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 242, 233, 0.9);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 3px solid #111111;
+  z-index: 2;
+}
+
+.snake-overlay-card {
+  background: #ffffff;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+  text-align: center;
+  max-width: 240px;
+  width: 100%;
+}
+
+.snake-overlay-card-wide {
+  max-width: 320px;
+  height: 80%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 0;
+}
+
+.snake-overlay-tilt {
+  transform: rotate(-2deg);
+}
+
+.snake-overlay-card p {
+  margin: 0;
+}
+
+.snake-overlay-text {
+  font-weight: 600;
+  text-transform: none;
+}
+
+.snake-overlay-card button {
+  border: 3px solid #111111;
+  background: #ff8ddb;
+  color: #111111;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.snake-overlay-card button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.snake-overlay-button.ghost {
+  background: #ffffff;
+}
+
+.snake-overlay-actions {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@keyframes snake-pop {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-16px);
+  }
+}

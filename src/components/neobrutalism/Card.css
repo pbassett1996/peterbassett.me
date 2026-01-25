@@ -1,0 +1,10 @@
+.nb-card {
+  background: #fec2a9;
+  padding: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 32rem;
+  width: 100%;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 #111111, 4px 4px 0 #111111, 4px 4px 0 #111111;
+}

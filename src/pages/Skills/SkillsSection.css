@@ -1,0 +1,86 @@
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  border: 2px solid #111111;
+  padding: 0.35rem 0.75rem;
+  background: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.skill-chip {
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.skill-chip:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 #111111;
+}
+
+.skill-chip:focus-visible {
+  outline: 3px solid #111111;
+  outline-offset: 2px;
+}
+
+.skill-modal {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-summary {
+  margin: 0;
+}
+
+.skill-meter {
+  display: grid;
+  gap: 0.8rem;
+  background: #ffffff;
+  border: 2px solid #111111;
+  padding: 1rem;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.skill-meter-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skill-level {
+  letter-spacing: 0.08em;
+}
+
+.skill-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skill-dot {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #111111;
+  background: #ffffff;
+}
+
+.skill-dot.active {
+  background: #ff8ddb;
+}
+
+.skill-highlights h4 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.skill-highlights ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}

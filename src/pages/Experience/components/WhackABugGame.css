@@ -1,0 +1,296 @@
+.whack-game {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.whack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.whack-title {
+  margin: 0;
+}
+
+.whack-score {
+  background: #111111;
+  color: #ffffff;
+  padding: 0.35rem 0.7rem;
+  border: 2px solid #111111;
+  font-size: 0.8rem;
+}
+
+.whack-instructions {
+  margin: 0;
+  font-weight: 600;
+}
+
+.whack-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.whack-column {
+  display: grid;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.whack-column-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(80px * 2 + 0.8rem);
+}
+
+.whack-hole {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  position: relative;
+  overflow: visible;
+}
+
+.whack-hole-mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.whack-pop {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  pointer-events: none;
+  animation: whack-pop 900ms ease-out forwards;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.whack-bug {
+  width: 64px;
+  height: auto;
+  filter: drop-shadow(2px 2px 0 #111111);
+  z-index: 3;
+  display: block;
+}
+
+.whack-bug-button {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) translateY(60%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 180ms ease;
+  width: 64px;
+  height: auto;
+  overflow: hidden;
+}
+
+.whack-bug-button:focus-visible {
+  outline: 3px solid #111111;
+  outline-offset: 4px;
+}
+
+.whack-hole::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 70px;
+  height: 22px;
+  transform: translateX(-50%) translateY(20%);
+  border-radius: 999px;
+  background: transparent;
+  background-image: url('../../../assets/images/ellipse.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 1;
+}
+
+.whack-hole.is-active .whack-bug-button {
+  transform: translateX(-50%) translateY(60%);
+  animation: bug-pop 1800ms ease-in-out;
+}
+
+@keyframes bug-pop {
+  0% {
+    transform: translateX(-50%) translateY(60%);
+  }
+  40% {
+    transform: translateX(-50%) translateY(0);
+  }
+  70% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(60%);
+  }
+}
+
+@keyframes whack-pop {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-18px);
+  }
+}
+
+.whack-progress {
+  display: grid;
+  gap: 0.6rem;
+  border-top: 2px dashed #111111;
+  padding-top: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.whack-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.whack-progress-track {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  border: 2px solid #111111;
+  background: #ffffff;
+  box-shadow: inset 2px 2px 0 #111111;
+}
+
+.whack-progress-fill {
+  height: 100%;
+  background: #ff8ddb;
+  border-right: 2px solid #111111;
+  transition: width 160ms linear;
+}
+
+.whack-progress-stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.whack-gameover {
+  background: #111111;
+  color: #ffffff;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #111111;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.whack-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 242, 233, 0.92);
+  display: grid;
+  place-items: center;
+  z-index: 5;
+  border: 3px solid #111111;
+}
+
+.whack-overlay-card {
+  background: #ffffff;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+  text-align: center;
+  max-width: 260px;
+}
+
+.whack-overlay-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.whack-overlay-text {
+  margin: 0;
+  font-weight: 600;
+}
+
+.whack-overlay-score {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.whack-overlay-button {
+  border: 3px solid #111111;
+  background: #ff8ddb;
+  color: #111111;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.whack-overlay-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+@media (max-width: 540px) {
+  .whack-grid {
+    flex-direction: column;
+  }
+
+  .whack-hole {
+    height: 70px;
+  }
+
+  .whack-column-center {
+    min-height: unset;
+  }
+}
