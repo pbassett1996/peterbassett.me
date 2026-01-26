@@ -4,23 +4,54 @@ import gmailIcon from "../assets/icons/socials/google.svg";
 import instagramIcon from "../assets/icons/socials/instagram.svg";
 import linkedinIcon from "../assets/icons/socials/linkedin.svg";
 import { useState } from "react";
+import { toast } from "sonner";
 import { Modal } from "../components/neobrutalism";
 import { experienceHighlights } from "../pages/Experience/data";
 import { educationHistory, snakeAchievements } from "../pages/Education/data";
-import { skillDetails, skillGroups, type SkillDetail } from "../pages/Skills/data";
+import {
+  skillDetails,
+  skillGroups,
+  type SkillDetail,
+} from "../pages/Skills/data";
 import "./MobileApp.css";
 
 type ActiveSkill = SkillDetail & { name: string };
 
 const MobileApp = () => {
   const [activeSkill, setActiveSkill] = useState<ActiveSkill | null>(null);
+  const handleContactSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xzdrdrol", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        form.reset();
+        toast.success("Message sent. Thanks for reaching out!");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    }
+  };
 
   return (
     <div className="mobile-app">
       <header className="mobile-hero">
         <div className="mobile-hero-header">
           <div>
-            <p className="mobile-eyebrow">Hi, I'm</p>
+            <p className="mobile-eyebrow">Hi, I&apos;m</p>
             <h1>
               Peter Bassett
               <span>Senior Embedded Software Engineer</span>
@@ -123,6 +154,73 @@ const MobileApp = () => {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="mobile-section">
+          <h2>Contact</h2>
+          <p className="mobile-contact-intro">
+            Have a role or project in mind? Send a quick message and I’ll get
+            back to you.
+          </p>
+          <div className="mobile-card">
+            <form
+              className="mobile-contact-form"
+              method="POST"
+              onSubmit={handleContactSubmit}
+            >
+              <label className="mobile-contact-field">
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </label>
+              <label className="mobile-contact-field">
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                />
+              </label>
+              <label className="mobile-contact-field">
+                <span>Message</span>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Tell me about your project..."
+                  required
+                />
+              </label>
+              <button type="submit" className="mobile-contact-submit">
+                Send message
+              </button>
+              <p className="mobile-contact-note">
+                Form powered by{" "}
+                <a href="https://formspree.io" target="_blank" rel="noreferrer">
+                  Formspree
+                </a>
+                .
+              </p>
+            </form>
+          </div>
+          <div className="mobile-contact-details">
+            <p>
+              <strong>Location:</strong> Broulee, Australia
+            </p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:petermarkbassett@gmai.com">
+                petermarkbassett@gmai.com
+              </a>
+            </p>
+            <p>
+              <strong>Response time:</strong> Usually within 1–2 business days
+            </p>
           </div>
         </section>
       </main>

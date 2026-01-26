@@ -4,6 +4,7 @@ import ExperienceSection from "./pages/Experience/ExperienceSection";
 import ExperienceTimelineSection from "./pages/Experience/ExperienceTimelineSection";
 import HomeSection from "./pages/Home/HomeSection";
 import SkillsSection from "./pages/Skills/SkillsSection";
+import ContactSection from "./pages/Contact/ContactSection";
 
 const DesktopApp = () => {
   return (
@@ -13,6 +14,7 @@ const DesktopApp = () => {
       <ExperienceTimelineSection />
       <SkillsSection />
       <EducationSection />
+      <ContactSection />
     </PageLayout>
   );
 };

@@ -1,0 +1,75 @@
+.contact-section {
+  gap: 2rem;
+}
+
+.contact-intro {
+  margin: 0.5rem 0 1rem;
+  max-width: 36rem;
+}
+
+.contact-details {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-details a {
+  text-decoration: underline;
+}
+
+.contact-card {
+  padding: 1.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.contact-field span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-field input,
+.contact-field textarea {
+  border: 2px solid #111111;
+  padding: 0.6rem 0.8rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  border: 2px solid #111111;
+  background: #ff8ddb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.contact-note {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
