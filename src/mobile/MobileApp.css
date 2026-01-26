@@ -121,6 +121,12 @@
   font-size: 1.2rem;
 }
 
+.mobile-skill-hint {
+  margin: -0.4rem 0 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 .mobile-stack {
   display: grid;
   gap: 1rem;
@@ -167,6 +173,10 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
+  color: #111111;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .mobile-tag:hover,

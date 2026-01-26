@@ -74,6 +74,7 @@ const MobileApp = () => {
 
         <section className="mobile-section">
           <h2>Skills</h2>
+          <p className="mobile-skill-hint">Tap a skill to see more details.</p>
           <div className="mobile-stack">
             {skillGroups.map((group) => (
               <article key={group.title} className="mobile-card">
