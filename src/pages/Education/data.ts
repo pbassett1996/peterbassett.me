@@ -1,27 +1,22 @@
 export const educationHistory = [
   {
-    degree: 'M.S. in Electrical Engineering',
-    school: 'University Name · Location',
-    timeframe: '2015 — 2017',
-    details: 'Focus: embedded systems, control theory, hardware/software co-design.',
+    degree: "Bachelor of Mechatronic Engineering (First Class Honours)",
+    school: "University of New South Wales · Sydney, Australia",
+    timeframe: "2015 — 2020",
+    details:
+      "WAM: 80.1. Focus on robotics, embedded systems, control, and hardware/software co-design.",
   },
   {
-    degree: 'B.S. in Computer Engineering',
-    school: 'University Name · Location',
-    timeframe: '2011 — 2015',
-    details: 'Focus: real-time systems, digital design, networking, and firmware.',
+    degree: "Canberra Grammar School",
+    school: "Canberra, Australia",
+    timeframe: "2005 — 2014",
+    details: "ATAR: 96.9",
   },
-]
-
+];
 export const snakeAchievements = [
-  'FIRST Robotics build lead',
-  'Hackathon finalist project',
-  'Undergrad capstone: IoT sensor net',
-  'Teaching assistant, Circuits I',
-  'IEEE student chapter chair',
-  'Embedded lab research assistant',
-  'Senior design award',
-  'Graduate thesis: adaptive control',
-  'Mentored junior design team',
-  'Community STEM workshop lead',
-]
+  "2020: First Class Honours, UNSW Mechatronic Engineering",
+  "2020: MicroMelomys Competition – Best Autonomous Mobile Robot Design (Webots)",
+  "2016: Nominee, Bartender of the Year, Merivale – Outstanding service and commitment",
+  "2014: House Captain, Canberra Grammar School",
+  "2014: House Athletics Captain, Canberra Grammar School",
+];

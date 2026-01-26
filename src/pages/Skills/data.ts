@@ -1,238 +1,312 @@
+export type SkillDetail = {
+  level: number;
+  label: string;
+  summary: string;
+  highlights: readonly string[];
+};
+
 export const skillGroups = [
   {
-    title: 'Embedded Stack',
-    skills: ['C/C++', 'RTOS (FreeRTOS/Zephyr)', 'Bare-metal', 'Drivers', 'OTA'],
+    title: "Embedded & Robotics",
+    skills: [
+      "C/C++",
+      "Linux Embedded",
+      "PetaLinux",
+      "Bare Metal",
+      "Ardupilot",
+      "OpenWRT",
+      "Yocto",
+      "Mavlink",
+      "Matlab",
+    ],
   },
   {
-    title: 'Hardware & Protocols',
-    skills: ['ARM Cortex-M', 'SPI/I2C/UART', 'CAN/LIN', 'BLE/Wi-Fi', 'JTAG'],
+    title: "Frontend & Tooling",
+    skills: [
+      "React",
+      "TypeScript",
+      "Electron",
+      "Websockets",
+      "Webservers",
+      "UX/UI Design",
+      "PHP",
+      "Laravel",
+    ],
   },
   {
-    title: 'Frontend & Tooling',
-    skills: ['React', 'TypeScript', 'WebSockets', 'Node.js', 'Storybook'],
+    title: "Backend & Delivery",
+    skills: [
+      "Golang",
+      "Python",
+      "Java",
+      "CI/CD",
+      "Docker & Containerization",
+      "GitLab",
+    ],
   },
-  {
-    title: 'Quality & Delivery',
-    skills: ['CI/CD', 'Static analysis', 'Unit + HIL testing', 'MISRA', 'Docs'],
-  },
-]
-
-export type SkillDetail = {
-  level: number
-  label: string
-  summary: string
-  highlights: readonly string[]
-}
+];
 
 export const skillDetails: Record<string, SkillDetail> = {
-  'C/C++': {
-    level: 5,
-    label: 'Expert',
-    summary:
-      'Extensive experience building embedded firmware, drivers, and performance-critical modules.',
-    highlights: [
-      'Modern C++ for firmware architecture and hardware abstraction',
-      'Memory-safe patterns, static analysis, and unit testing',
-      'Performance profiling and optimization on constrained devices',
-    ],
-  },
-  'RTOS (FreeRTOS/Zephyr)': {
-    level: 5,
-    label: 'Expert',
-    summary:
-      'Designed real-time systems with task scheduling, IPC, and power-aware architectures.',
-    highlights: [
-      'Task/thread orchestration, timers, and event-driven systems',
-      'Queues, semaphores, mutexes, and ISR-safe patterns',
-      'Board bring-up with Zephyr and FreeRTOS',
-    ],
-  },
-  'Bare-metal': {
+  "C/C++": {
     level: 4,
-    label: 'Advanced',
+    label: "Advanced",
     summary:
-      'Developed bare-metal firmware with deterministic timing and minimal overhead.',
+      "Extensive experience building embedded firmware, drivers, and performance-critical modules.",
     highlights: [
-      'Startup code, bootloaders, and linker scripts',
-      'Low-level register programming and interrupt handling',
-      'Power optimization for battery-powered devices',
+      "Modern C++ for firmware architecture and hardware abstraction & interfacing",
+      "Memory-safe patterns, static analysis, and communications",
+      "Performance profiling and optimization on constrained devices",
     ],
   },
-  Drivers: {
-    level: 5,
-    label: 'Expert',
-    summary:
-      'Built robust peripheral drivers across sensors, connectivity, and custom hardware.',
-    highlights: [
-      'I2C, SPI, UART, CAN, and DMA integrations',
-      'Error recovery, diagnostics, and telemetry hooks',
-      'Test harnesses for hardware-in-loop validation',
-    ],
-  },
-  OTA: {
+  "Linux Embedded": {
     level: 4,
-    label: 'Advanced',
+    label: "Advanced",
     summary:
-      'Implemented secure OTA workflows for production devices and factory provisioning.',
+      "Deep experience with embedded Linux systems for production devices.",
     highlights: [
-      'Signed firmware, rollback protection, and A/B updates',
-      'Network resiliency and partial update support',
-      'Fleet monitoring and rollout gating',
+      "Device bring-up, driver integration, and kernel module development",
+      "Network stacks and real-time telemetry",
+      "Debugging and profiling on target hardware",
     ],
   },
-  'ARM Cortex-M': {
-    level: 5,
-    label: 'Expert',
-    summary:
-      'Deep experience across Cortex-M families for industrial and consumer devices.',
-    highlights: [
-      'Startup/boot, low-power modes, and exception handling',
-      'Peripheral mapping and clock tree configuration',
-      'Debugging with SWD/JTAG and ETM traces',
-    ],
-  },
-  'SPI/I2C/UART': {
-    level: 5,
-    label: 'Expert',
-    summary:
-      'Extensive serial protocol work for sensors, radios, and peripheral devices.',
-    highlights: [
-      'DMA-based transfers and interrupt-driven IO',
-      'Bus recovery, error handling, and timing analysis',
-      'Multi-device arbitration and addressing strategies',
-    ],
-  },
-  'CAN/LIN': {
+  PetaLinux: {
     level: 4,
-    label: 'Advanced',
-    summary: 'Built CAN/LIN stacks for automotive-adjacent and industrial applications.',
-    highlights: [
-      'Message scheduling and real-time constraints',
-      'Diagnostics, filtering, and bus-off recovery',
-      'Interoperability testing with external tools',
-    ],
-  },
-  'BLE/Wi-Fi': {
-    level: 4,
-    label: 'Advanced',
+    label: "Advanced",
     summary:
-      'Connected devices via BLE and Wi-Fi with security and power constraints in mind.',
+      "Experience customising PetaLinux for embedded applications and production deployment.",
     highlights: [
-      'GATT services, provisioning flows, and OTA transport',
-      'Secure pairing, encryption, and key management',
-      'Power-aware connection strategies',
+      "Yocto-based builds and BSP configuration",
+      "Bootloader and kernel customisation",
+      "Hardware bring-up and network integration",
     ],
   },
-  JTAG: {
-    level: 4,
-    label: 'Advanced',
-    summary: 'Debugged complex embedded issues using JTAG/SWD tooling and trace.',
+  "Bare Metal": {
+    level: 2,
+    label: "Intermediate",
+    summary:
+      "Some experience developing firmware without an OS, handling low-level hardware directly.",
     highlights: [
-      'Hardware bring-up and failure analysis',
-      'Scripted debug workflows for teams',
-      'Integration with CI/HIL pipelines',
+      "Minimal system bring-up",
+      "eFUSE programming for secure-boot",
+      "Basic interrupt handling",
+    ],
+  },
+  Ardupilot: {
+    level: 4,
+    label: "Advanced",
+    summary: "Developed and customised Ardupilot for robotics and UAV control.",
+    highlights: [
+      "Mission planning and control",
+      "Telemetry and sensor integration",
+      "Simulation and HIL testing",
+    ],
+  },
+  OpenWRT: {
+    level: 4,
+    label: "Advanced",
+    summary:
+      "Configured and maintained OpenWRT devices for networking and telemetry.",
+    highlights: [
+      "Package management and service customisation",
+      "Network monitoring and routing configuration",
+      "Firmware integration for embedded devices",
+      "VPN client configuration and management",
+    ],
+  },
+  Yocto: {
+    level: 3,
+    label: "Proficient",
+    summary:
+      "Worked with Yocto through PetaLinux for embedded image customisation.",
+    highlights: [
+      "Bitbake recipe tweaks and layer configuration",
+      "Rootfs customisation and package management",
+      "Integration with PetaLinux build and CI/CD pipelines",
+    ],
+  },
+  Mavlink: {
+    level: 4,
+    label: "Advanced",
+    summary:
+      "Implemented Mavlink communication for UAVs and robotics telemetry.",
+    highlights: [
+      "Message encoding/decoding and protocol handling",
+      "Integration with Ardupilot and embedded systems",
+      "Telemetry validation and error handling",
+    ],
+  },
+  Matlab: {
+    level: 4,
+    label: "Advanced",
+    summary:
+      "Used Matlab for algorithm development, simulation, and data analysis.",
+    highlights: [
+      "Navigation algorithm prototyping",
+      "Data visualisation and analysis",
+      "Signal processing and simulations",
     ],
   },
   React: {
-    level: 4,
-    label: 'Advanced',
+    level: 5,
+    label: "Expert",
     summary:
-      'Built internal tools and dashboards that surface embedded telemetry clearly.',
+      "Built production-grade dashboards, desktop apps, and cloud interfaces for embedded and full-stack systems.",
     highlights: [
-      'Component-driven UI design and state management',
-      'Realtime data streaming and visualization',
-      'Design systems with a neobrutalist aesthetic',
+      "Embedded system dashboards and telemetry monitoring",
+      "Electron desktop applications for tooling and production workflows",
+      "Cloud-based web applications and internal tools",
+      "Real time data visualisation and analysis",
     ],
   },
   TypeScript: {
     level: 4,
-    label: 'Advanced',
+    label: "Advanced",
     summary:
-      'Type-safe UI and tooling stacks that improve reliability and collaboration.',
+      "Built type-safe front-end and tooling stacks for high-data, real-time systems.",
     highlights: [
-      'Shared types between front-end and services',
-      'Strict typing for complex data flows',
-      'Developer tooling and linting setup',
+      "Developed React applications combining functional and OOP patterns",
+      "Handled telemetry streaming, high-velocity data, and video-style interfaces",
+      "Decoded/encoded binary protocols and integrated Protobuf messages",
+      "Integrated with REST APIs and back-end services",
+    ],
+  },
+  Electron: {
+    level: 4,
+    label: "Advanced",
+    summary:
+      "Built cross-platform desktop applications for interfacing with and monitoring embedded devices.",
+    highlights: [
+      "Unified interfaces for devices over HTTP, TCP, UDP, and serial",
+      "Real-time telemetry dashboards and configuration tooling",
+      "Bridged Electron, Node.js, and native protocols for device communication",
+      "Packaging, distribution, and auto-update workflows",
     ],
   },
   WebSockets: {
+    level: 5,
+    label: "Expert",
+    summary:
+      "Designed and implemented high-throughput realtime streaming for cloud services, desktop apps, and embedded devices.",
+    highlights: [
+      "Cloud-based telemetry streaming at high data rates",
+      "WebSocket implementations in Go, TypeScript, and C/C++",
+      "Embedded device ↔ cloud ↔ UI streaming architectures",
+      "Connection lifecycle management, backpressure, and reconnection strategies",
+      "WebRTC data channels for low-latency transport",
+    ],
+  },
+  Webservers: {
+    level: 5,
+    label: "Expert",
+    summary:
+      "Designed and shipped RESTful web servers and APIs across embedded devices, services, and internal tooling.",
+    highlights: [
+      "Embedded and service-side REST API design",
+      "Implementations across Go, C/C++, Python, and PHP",
+      "Device configuration, control, and telemetry endpoints",
+      "Performance tuning and resource-aware server design",
+      "Authentication, security boundaries, and safe exposure of device APIs",
+    ],
+  },
+  "UX/UI Design": {
     level: 3,
-    label: 'Proficient',
-    summary: 'Realtime communication for dashboards and device monitoring.',
+    label: "Proficient",
+    summary:
+      "Self-taught UI/UX design focused on clarity, usability, and data-dense interfaces.",
     highlights: [
-      'Streaming telemetry and event ingestion',
-      'Connection health and reconnection strategies',
-      'Message schemas for embedded data',
+      "Strong visual intuition and layout hierarchy",
+      "Dashboard and tooling UX for complex, real-time data",
+      "Experience applying Material Design, Bootstrap, and neobrutalist systems",
+      "Consistent, accessible component and interaction patterns",
     ],
   },
-  'Node.js': {
+  PHP: {
+    level: 2,
+    label: "Intermediate",
+    summary:
+      "Used PHP in production to support device provisioning and first-install workflows.",
+    highlights: [
+      "Backend logic for embedded device bring-up on corporate networks",
+      "Form handling and request validation",
+      "Persistence using SQLite",
+    ],
+  },
+
+  Laravel: {
+    level: 2,
+    label: "Intermediate",
+    summary:
+      "Built a production Laravel app for provisioning and onboarding embedded devices.",
+    highlights: [
+      "Routing, controllers, and server-rendered views",
+      "SQLite-backed state management for device installation flows",
+      "Operational tooling for initial device configuration",
+    ],
+  },
+  "C/C++ + Golang": {
+    level: 4,
+    label: "Advanced",
+    summary:
+      "Built device and cloud software combining Go networking with low-level C components.",
+    highlights: [
+      "Go-based embedded services with cgo for hardware-critical paths",
+      "On-device APIs, telemetry, and control planes",
+      "Live video and data streaming using LiveKit",
+    ],
+  },
+  Python: {
+    level: 4,
+    label: "Advanced",
+    summary: "Used Python for tooling, scripts, and prototypes.",
+    highlights: [
+      "Data processing and automation",
+      "Prototyping front-end dashboards",
+      "Simulation and testing scripts",
+    ],
+  },
+  Java: {
+    level: 2,
+    label: "Familiar",
+    summary:
+      "Working knowledge of Java, primarily through collaboration, debugging, and code review.",
+    highlights: [
+      "Assisted with troubleshooting and reasoning through Java-based systems",
+      "Code review and refactoring support",
+      "Understanding of common backend patterns and pitfalls",
+    ],
+  },
+  "CI/CD": {
     level: 3,
-    label: 'Proficient',
-    summary: 'Built APIs and tooling pipelines that support firmware delivery.',
+    label: "Proficient",
+    summary:
+      "Designed and maintained CI/CD pipelines across frontend, desktop, and embedded systems.",
     highlights: [
-      'Device provisioning services',
-      'CI automation and build tooling',
-      'Data pipelines for device analytics',
+      "Automated builds for web apps, Electron applications, and embedded firmware",
+      "Multi-pipeline workflows with artifact versioning",
+      "CI for OpenWRT and PetaLinux-based systems",
+      "Integration with Docker and GitLab for repeatable, reliable delivery",
     ],
   },
-  Storybook: {
-    level: 3,
-    label: 'Proficient',
-    summary: 'Documented UI systems for internal tools and product teams.',
+  "Docker & Containerization": {
+    level: 5,
+    label: "Expert",
+    summary:
+      "Used Docker extensively across embedded, robotics, and web systems to standardise builds and environments.",
     highlights: [
-      'Component documentation and testing',
-      'Design collaboration workflows',
-      'Theme and accessibility reviews',
+      "Containerised build environments for frontend, backend, and embedded firmware",
+      "Cross-compilation and toolchain isolation for embedded and robotics workflows",
+      "Docker-based test and development environments",
+      "First-class integration with CI/CD pipelines for reproducible builds",
     ],
   },
-  'CI/CD': {
+  GitLab: {
     level: 4,
-    label: 'Advanced',
-    summary: 'Automated firmware builds, testing, and deployment workflows.',
+    label: "Advanced",
+    summary: "Used GitLab for source control, CI/CD, and team collaboration.",
     highlights: [
-      'Multi-target build pipelines and artifact management',
-      'Automated regression testing with hardware rigs',
-      'Release orchestration and gating checks',
+      "Pipeline configuration and artifact management",
+      "Merge request workflows and code review integration",
+      "Automation of builds, tests, and deployments",
     ],
   },
-  'Static analysis': {
-    level: 4,
-    label: 'Advanced',
-    summary: 'Applied static analysis to enforce safety and maintainability.',
-    highlights: [
-      'MISRA and CERT compliance strategies',
-      'Automated linting and quality gates',
-      'Issue triage and codebase remediation',
-    ],
-  },
-  'Unit + HIL testing': {
-    level: 4,
-    label: 'Advanced',
-    summary: 'Built test suites spanning unit, integration, and hardware-in-loop.',
-    highlights: [
-      'Test harness design for embedded systems',
-      'Automated test runners and reporting',
-      'Validation across production hardware',
-    ],
-  },
-  MISRA: {
-    level: 3,
-    label: 'Proficient',
-    summary: 'Experienced applying MISRA guidelines in safety-focused projects.',
-    highlights: [
-      'Compliance documentation and audits',
-      'Coding standards enforcement',
-      'Risk assessments and deviation management',
-    ],
-  },
-  Docs: {
-    level: 4,
-    label: 'Advanced',
-    summary: 'Clear documentation for firmware, tooling, and cross-team communication.',
-    highlights: [
-      'Architecture diagrams and API references',
-      'Onboarding guides for new engineers',
-      'Release notes and troubleshooting runbooks',
-    ],
-  },
-}
+};

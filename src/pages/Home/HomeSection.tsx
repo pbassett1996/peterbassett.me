@@ -1,11 +1,11 @@
-import { PageSection } from '../../components/layout/PageLayout'
-import downArrow from '../../assets/icons/neobrutalism/Color/Down arrow.svg'
-import headshot from '../../assets/images/headshot.png'
-import githubIcon from '../../assets/icons/socials/github.svg'
-import gmailIcon from '../../assets/icons/socials/google.svg'
-import instagramIcon from '../../assets/icons/socials/instagram.svg'
-import linkedinIcon from '../../assets/icons/socials/linkedin.svg'
-import './HomeSection.css'
+import { PageSection } from "../../components/layout/PageLayout";
+import downArrow from "../../assets/icons/neobrutalism/Color/Down arrow.svg";
+import headshot from "../../assets/images/headshot.png";
+import githubIcon from "../../assets/icons/socials/github.svg";
+import gmailIcon from "../../assets/icons/socials/google.svg";
+import instagramIcon from "../../assets/icons/socials/instagram.svg";
+import linkedinIcon from "../../assets/icons/socials/linkedin.svg";
+import "./HomeSection.css";
 
 const HomeSection = () => {
   return (
@@ -17,24 +17,30 @@ const HomeSection = () => {
             <span>Senior Embedded Software Engineer</span>
           </h1>
           <p className="lead">
-            I design resilient embedded systems with front-end experiences that make complex
-            hardware feel intuitive. I specialize in taking products from prototype to
-            production by aligning firmware, hardware, and user-facing tooling, and I care
-            deeply about reliability, performance, and clear operator experiences. I’m
-            looking for remote-only roles where I can build embedded platforms that ship
-            with confidence.
+            I design resilient embedded and robotic systems with front-end
+            experiences that make complex hardware intuitive. I specialise in
+            taking products from prototype to production by aligning firmware,
+            hardware, and user-facing tools, with a focus on reliability,
+            performance, and clear operator experiences. I’m seeking remote
+            roles across embedded, front-end, and back-end domains.
           </p>
           <div className="profile-socials">
-            <a href="https://github.com/your-handle" aria-label="GitHub">
+            <a href="https://github.com/pbassett1996/" aria-label="GitHub">
               <img src={githubIcon} alt="" className="mini-icon-img" />
             </a>
-            <a href="https://www.linkedin.com/in/your-handle" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/peter-bassett/"
+              aria-label="LinkedIn"
+            >
               <img src={linkedinIcon} alt="" className="mini-icon-img" />
             </a>
-            <a href="mailto:you@email.com" aria-label="Gmail">
+            <a href="mailto:peterbassett@gmail.com" aria-label="Gmail">
               <img src={gmailIcon} alt="" className="mini-icon-img" />
             </a>
-            <a href="https://www.instagram.com/your-handle" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/petermarkbassett"
+              aria-label="Instagram"
+            >
               <img src={instagramIcon} alt="" className="mini-icon-img" />
             </a>
           </div>
@@ -50,7 +56,7 @@ const HomeSection = () => {
         <img src={downArrow} alt="" />
       </div>
     </PageSection>
-  )
-}
+  );
+};
 
-export default HomeSection
+export default HomeSection;
