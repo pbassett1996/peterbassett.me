@@ -73,3 +73,7 @@
   opacity: 0.7;
 }
 
+.contact-note a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
