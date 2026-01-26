@@ -1,20 +1,11 @@
-import { PageLayout } from './components/layout/PageLayout'
-import EducationSection from './pages/Education/EducationSection'
-import ExperienceSection from './pages/Experience/ExperienceSection'
-import ExperienceTimelineSection from './pages/Experience/ExperienceTimelineSection'
-import HomeSection from './pages/Home/HomeSection'
-import SkillsSection from './pages/Skills/SkillsSection'
+import DesktopApp from "./DesktopApp";
+import useMediaQuery from "./hooks/useMediaQuery";
+import MobileApp from "./mobile/MobileApp";
 
 function App() {
-  return (
-    <PageLayout>
-      <HomeSection />
-      <ExperienceSection />
-      <ExperienceTimelineSection />
-      <SkillsSection />
-      <EducationSection />
-    </PageLayout>
-  )
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
+  return isMobile ? <MobileApp /> : <DesktopApp />;
 }
 
 export default App
