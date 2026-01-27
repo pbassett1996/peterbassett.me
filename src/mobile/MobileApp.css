@@ -16,6 +16,28 @@
   padding: 1.5rem;
 }
 
+.mobile-actions {
+  margin-top: 1rem;
+  display: grid;
+}
+
+.mobile-btn-primary {
+  background: #f9c0e7;
+  border: 2px solid #111111;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  box-shadow: 3px 3px 0 #111111;
+  color: #111111;
+}
+
+.mobile-btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #111111;
+}
+
 .mobile-hero-header {
   display: grid;
   gap: 1rem;

@@ -86,6 +86,20 @@ const MobileApp = () => {
             <img src={instagramIcon} alt="" className="mini-icon-img" />
           </a>
         </div>
+        <div className="mobile-actions">
+          <a 
+            href="?resume&autoPrint=true" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="mobile-btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open('?resume&autoPrint=true', '_blank');
+            }}
+          >
+            Download CV
+          </a>
+        </div>
       </header>
 
       <main className="mobile-sections">

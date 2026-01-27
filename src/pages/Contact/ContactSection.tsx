@@ -87,6 +87,20 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
+          <div className="contact-resume-action">
+            <a 
+              href="?resume&autoPrint=true" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open('?resume&autoPrint=true', '_blank');
+              }}
+            >
+              Download CV
+            </a>
+          </div>
         </div>
 
         <Card className="contact-card">

@@ -20,6 +20,15 @@
   text-decoration: underline;
 }
 
+.contact-resume-action {
+  margin-top: 2rem;
+}
+
+.contact-resume-action .btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .contact-card {
   padding: 1.5rem;
   justify-self: end;
