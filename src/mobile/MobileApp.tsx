@@ -66,24 +66,24 @@ const MobileApp = () => {
           front-end tooling that makes complex hardware intuitive. Open to
           remote roles across embedded, front-end, and back-end work.
         </p>
-        <div className="mobile-socials">
+        <div className="profile-socials">
           <a href="https://github.com/pbassett1996/" aria-label="GitHub">
-            <img src={githubIcon} alt="" />
+            <img src={githubIcon} alt="" className="mini-icon-img" />
           </a>
           <a
             href="https://www.linkedin.com/in/peter-bassett/"
             aria-label="LinkedIn"
           >
-            <img src={linkedinIcon} alt="" />
+            <img src={linkedinIcon} alt="" className="mini-icon-img" />
           </a>
           <a href="mailto:peterbassett@gmail.com" aria-label="Gmail">
-            <img src={gmailIcon} alt="" />
+            <img src={gmailIcon} alt="" className="mini-icon-img" />
           </a>
           <a
             href="https://www.instagram.com/petermarkbassett"
             aria-label="Instagram"
           >
-            <img src={instagramIcon} alt="" />
+            <img src={instagramIcon} alt="" className="mini-icon-img" />
           </a>
         </div>
       </header>
@@ -93,11 +93,34 @@ const MobileApp = () => {
           <h2>Experience</h2>
           <div className="mobile-stack">
             {experienceHighlights.map((item) => (
-              <article key={item.title} className="mobile-card">
-                <p className="mobile-meta">{item.timeframe}</p>
-                <h3>{item.title}</h3>
-                <p className="mobile-subtitle">{item.company}</p>
-                <p>{item.description}</p>
+              <article key={item.company + item.title} className="mobile-card">
+                <div className="mobile-card-header">
+                  <div>
+                    <h3>{item.company}</h3>
+                    <p className="mobile-subtitle">{item.title}</p>
+                  </div>
+                  <p className="mobile-meta">{item.timeframe}</p>
+                </div>
+                <p className="mobile-experience-desc">{item.description}</p>
+                
+                {item.roles && (
+                  <div className="mobile-role-progression">
+                    {item.roles.map((role, idx) => (
+                      <div key={role.title + idx} className="mobile-role-item">
+                        <div className="mobile-role-marker">
+                          <span className="mobile-role-dot" />
+                          {idx < item.roles!.length - 1 && <span className="mobile-role-line" />}
+                        </div>
+                        <div className="mobile-role-content">
+                          <div className="mobile-role-header">
+                            <h4>{role.title}</h4>
+                            <span className="mobile-role-time">{role.timeframe}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </article>
             ))}
           </div>
@@ -163,6 +186,24 @@ const MobileApp = () => {
             Have a role or project in mind? Send a quick message and I’ll get
             back to you.
           </p>
+          <div className="mobile-contact-details">
+            <div className="mobile-contact-detail">
+              <strong>Location:</strong>
+              <p>Broulee, Australia (Open to remote)</p>
+            </div>
+            <div className="mobile-contact-detail mobile-contact-detail-email">
+              <strong>Email:</strong>
+              <p>
+                <a href="mailto:petermarkbassett@gmai.com">
+                  petermarkbassett@gmai.com
+                </a>
+              </p>
+            </div>
+            <div className="mobile-contact-detail">
+              <strong>Response time:</strong>
+              <p>Usually within 1–2 business days</p>
+            </div>
+          </div>
           <div className="mobile-card">
             <form
               className="mobile-contact-form"
@@ -207,20 +248,6 @@ const MobileApp = () => {
                 .
               </p>
             </form>
-          </div>
-          <div className="mobile-contact-details">
-            <p>
-              <strong>Location:</strong> Broulee, Australia
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:petermarkbassett@gmai.com">
-                petermarkbassett@gmai.com
-              </a>
-            </p>
-            <p>
-              <strong>Response time:</strong> Usually within 1–2 business days
-            </p>
           </div>
         </section>
       </main>

@@ -146,12 +146,15 @@
   0% {
     transform: translateX(-50%) translateY(60%);
   }
+
   40% {
     transform: translateX(-50%) translateY(0);
   }
+
   70% {
     transform: translateX(-50%) translateY(0);
   }
+
   100% {
     transform: translateX(-50%) translateY(60%);
   }
@@ -162,9 +165,11 @@
     opacity: 0;
     transform: translateX(-50%) translateY(6px);
   }
+
   20% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(-18px);
@@ -199,7 +204,7 @@
 
 .whack-progress-fill {
   height: 100%;
-  background: #ff8ddb;
+  background: #f9c0e7;
   border-right: 2px solid #111111;
   transition: width 160ms linear;
 }
@@ -266,7 +271,7 @@
 
 .whack-overlay-button {
   border: 3px solid #111111;
-  background: #ff8ddb;
+  background: #f9c0e7;
   color: #111111;
   font-weight: 800;
   text-transform: uppercase;

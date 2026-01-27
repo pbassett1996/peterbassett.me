@@ -1,15 +1,47 @@
 export const experienceHighlights = [
   {
-    timeframe: "Dec 2021 — Present",
-    title: "Senior Embedded & Robotics Engineer",
-    company: "Advanced Navigation · Sydney, Australia",
+    timeframe: "Nov 2020 — Present",
+    title: "Senior Embedded Software Engineer",
+    company: "Advanced Navigation",
     description:
-      "Design and deliver production-ready embedded systems and robotics software, from low-level firmware and navigation algorithms to React/TypeScript dashboards that turn complex telemetry into intuitive interfaces.",
+      "A 5-year journey from R&D intern to Senior Embedded Engineer, delivering production-ready firmware, navigation algorithms, and high-performance user interfaces.",
+    roles: [
+      {
+        title: "Senior Embedded Software Engineer",
+        timeframe: "Jan 2024 — Present",
+        location: "Canberra, Australia · Remote",
+        skills: ["C++", "Embedded Linux", "Petalinux", "Yocto Project", "React.js", "Typescript", "MATLAB", "Ardupilot"],
+      },
+      {
+        title: "Senior Robotics Software Engineer",
+        timeframe: "Feb 2023 — Apr 2024",
+        location: "Sydney, Australia · On-site",
+        skills: ["Ardupilot", "C", "Mavlink", "Golang", "React.js", "Typescript", "OpenWRT", "Embedded Linux"],
+      },
+      {
+        title: "Robotic Software Engineer",
+        timeframe: "Dec 2021 — Apr 2024",
+        location: "Sydney, Australia",
+        skills: ["C", "Ardupilot", "Mavlink", "React.js", "Typescript", "OpenWRT", "Embedded Linux", "Golang"],
+      },
+      {
+        title: "Junior Software Engineer",
+        timeframe: "Feb 2021 — Feb 2022",
+        location: "Sydney, Australia",
+        skills: ["Typescript", "React.js"],
+      },
+      {
+        title: "Research And Development Intern",
+        timeframe: "Nov 2020 — Feb 2021",
+        location: "Australia",
+        skills: [],
+      },
+    ],
   },
   {
     timeframe: "Aug 2015 — Jun 2020",
     title: "Bar Supervisor",
-    company: "Merivale · Sydney, Australia",
+    company: "Merivale",
     description:
       "Managed multiple venues and teams, ensuring smooth daily operations while training staff and delivering high-quality service in fast-paced hospitality environments.",
   },

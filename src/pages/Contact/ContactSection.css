@@ -1,5 +1,7 @@
 .contact-section {
-  gap: 2rem;
+  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+  align-items: start;
 }
 
 .contact-intro {
@@ -9,8 +11,9 @@
 
 .contact-details {
   display: grid;
-  gap: 0.5rem;
+  gap: 1.25rem;
   font-size: 0.95rem;
+  margin-top: 1.5rem;
 }
 
 .contact-details a {
@@ -19,6 +22,8 @@
 
 .contact-card {
   padding: 1.5rem;
+  justify-self: end;
+  width: min(480px, 100%);
 }
 
 .contact-form {
@@ -52,7 +57,7 @@
 
 .contact-submit {
   border: 2px solid #111111;
-  background: #ff8ddb;
+  background: #f9c0e7;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -76,4 +81,39 @@
 .contact-note a {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.contact-detail {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.contact-detail-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.contact-detail-title {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+
+.contact-detail-subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    justify-self: stretch;
+  }
 }

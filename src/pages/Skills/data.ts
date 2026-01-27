@@ -243,14 +243,15 @@ export const skillDetails: Record<string, SkillDetail> = {
       "Operational tooling for initial device configuration",
     ],
   },
-  "C/C++ + Golang": {
+  Golang: {
     level: 4,
     label: "Advanced",
     summary:
-      "Built device and cloud software combining Go networking with low-level C components.",
+      "Built backend services and embedded networking in Go for device fleets.",
     highlights: [
+      "Networked services, APIs, and telemetry pipelines",
+      "Concurrency patterns with goroutines and channels",
       "Go-based embedded services with cgo for hardware-critical paths",
-      "On-device APIs, telemetry, and control planes",
       "Live video and data streaming using LiveKit",
     ],
   },

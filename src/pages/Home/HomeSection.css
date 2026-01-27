@@ -23,10 +23,12 @@
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(8px);
   }
@@ -131,7 +133,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: #ff8ddb;
+  background: #f9c0e7;
   border: 3px solid #111111;
   border-radius: var(--splatter-radius);
   transform: rotate(-6deg) scale(1.05);
@@ -175,12 +177,6 @@
   padding: 100px;
 }
 
-.profile-socials {
-  display: flex;
-  gap: 0.6rem;
-  justify-content: center;
-}
-
 .mini-icon {
   display: grid;
   place-items: center;
@@ -190,20 +186,6 @@
   background: #ffffff;
   font-size: 1.1rem;
   box-shadow: 2px 2px 0 #111111;
-}
-
-.mini-icon-img {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(2px 2px 0 #111111);
-  transition: transform 120ms ease, filter 120ms ease;
-  display: block;
-}
-
-.profile-socials a:hover .mini-icon-img,
-.profile-socials a:focus-visible .mini-icon-img {
-  transform: translate(-2px, -2px);
-  filter: drop-shadow(4px 4px 0 #111111);
 }
 
 .profile-details p {

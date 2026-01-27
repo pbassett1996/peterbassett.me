@@ -21,7 +21,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #ff595e;
+  background: #f9c0e7;
   border: 3px solid #111111;
   box-shadow: 3px 3px 0 #111111;
 }
@@ -34,4 +34,64 @@
 
 .timeline-card {
   position: relative;
+}
+
+.experience-desc {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.role-progression {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+}
+
+.role-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+}
+
+.role-marker {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  width: 14px;
+}
+
+.role-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f9c0e7;
+  border: 2px solid #111111;
+  margin-top: 0.4rem;
+}
+
+.role-line {
+  width: 2px;
+  background: #111111;
+  margin: 0.2rem 0;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.role-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.role-time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.8;
 }

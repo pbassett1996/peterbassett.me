@@ -1,4 +1,7 @@
 import { toast } from "sonner";
+import infoIcon from "../../assets/icons/neobrutalism/B&W/Info.svg";
+import mailIcon from "../../assets/icons/neobrutalism/B&W/Mail.svg";
+import timeIcon from "../../assets/icons/neobrutalism/B&W/Time.svg";
 import { PageSection } from "../../components/layout/PageLayout";
 import { Card } from "../../components/neobrutalism";
 import "./ContactSection.css";
@@ -39,18 +42,50 @@ const ContactSection = () => {
             I’ll get back to you as soon as I can.
           </p>
           <div className="contact-details">
-            <p>
-              <strong>Location:</strong> Broulee, Australia
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:petermarkbassett@gmai.com">
-                petermarkbassett@gmai.com
-              </a>
-            </p>
-            <p>
-              <strong>Response time:</strong> Usually within 1–2 business days
-            </p>
+            <div className="contact-detail">
+              <img
+                className="contact-detail-icon"
+                src={infoIcon}
+                alt=""
+                aria-hidden="true"
+              />
+              <div>
+                <p className="contact-detail-title">Location</p>
+                <p className="contact-detail-subtitle">
+                  Broulee, Australia (Open to remote)
+                </p>
+              </div>
+            </div>
+            <div className="contact-detail">
+              <img
+                className="contact-detail-icon"
+                src={mailIcon}
+                alt=""
+                aria-hidden="true"
+              />
+              <div>
+                <p className="contact-detail-title">Email</p>
+                <p className="contact-detail-subtitle">
+                  <a href="mailto:petermarkbassett@gmai.com">
+                    petermarkbassett@gmai.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="contact-detail">
+              <img
+                className="contact-detail-icon"
+                src={timeIcon}
+                alt=""
+                aria-hidden="true"
+              />
+              <div>
+                <p className="contact-detail-title">Response time</p>
+                <p className="contact-detail-subtitle">
+                  Usually within 1–2 business days
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -13,7 +13,6 @@ const SkillsSection = () => {
     <PageSection id="skills">
       <div className="section">
         <h2>My Skills</h2>
-        <p className="skill-hint">Click a skill to see more details.</p>
         <div className="grid">
           {skillGroups.map((group) => (
             <Card key={group.title} className="section-card">
@@ -38,6 +37,7 @@ const SkillsSection = () => {
             </Card>
           ))}
         </div>
+        <p className="skill-hint">Click a skill to see more details.</p>
       </div>
 
       <Modal
