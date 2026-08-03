@@ -68,12 +68,19 @@ const MobileApp = () => {
           Seeking remote roles across front-end, back-end, and embedded/robotics.
         </p>
         <div className="profile-socials">
-          <a href="https://github.com/pbassett1996/" aria-label="GitHub">
+          <a
+            href="https://github.com/pbassett1996/"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={githubIcon} alt="" className="mini-icon-img" />
           </a>
           <a
             href="https://www.linkedin.com/in/peter-bassett/"
             aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={linkedinIcon} alt="" className="mini-icon-img" />
           </a>
@@ -83,6 +90,8 @@ const MobileApp = () => {
           <a
             href="https://www.instagram.com/petermarkbassett"
             aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={instagramIcon} alt="" className="mini-icon-img" />
           </a>
