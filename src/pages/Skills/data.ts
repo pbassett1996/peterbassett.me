@@ -13,6 +13,7 @@ export const skillGroups = [
       "Linux Embedded",
       "PetaLinux",
       "Bare Metal",
+      "STM32",
       "Ardupilot",
       "OpenWRT",
       "Yocto",
@@ -26,7 +27,6 @@ export const skillGroups = [
       "React",
       "TypeScript",
       "Electron",
-      "Websockets",
       "Webservers",
       "UX/UI Design",
       "PHP",
@@ -53,7 +53,7 @@ export const skillDetails: Record<string, SkillDetail> = {
     summary:
       "Extensive experience building embedded firmware, drivers, and performance-critical modules.",
     highlights: [
-      "Modern C++ for firmware architecture and hardware abstraction & interfacing",
+      "Modern C++ (17/20) for firmware architecture and hardware abstraction & interfacing",
       "Memory-safe patterns, static analysis, and communications",
       "Performance profiling and optimization on constrained devices",
     ],
@@ -89,6 +89,17 @@ export const skillDetails: Record<string, SkillDetail> = {
       "Minimal system bring-up",
       "eFUSE programming for secure-boot",
       "Basic interrupt handling",
+    ],
+  },
+  STM32: {
+    level: 2,
+    label: "Intermediate",
+    summary:
+      "Recent hands-on experience building and debugging firmware for STM32 microcontrollers.",
+    highlights: [
+      "Peripheral setup with HAL/LL drivers (GPIO, UART, timers, SPI/I2C)",
+      "Interrupt-driven firmware and basic DMA usage",
+      "Bring-up, flashing, and on-target debugging with ST tooling",
     ],
   },
   Ardupilot: {
@@ -159,8 +170,8 @@ export const skillDetails: Record<string, SkillDetail> = {
     ],
   },
   TypeScript: {
-    level: 4,
-    label: "Advanced",
+    level: 5,
+    label: "Expert",
     summary:
       "Built type-safe front-end and tooling stacks for high-data, real-time systems.",
     highlights: [
@@ -182,19 +193,6 @@ export const skillDetails: Record<string, SkillDetail> = {
       "Packaging, distribution, and auto-update workflows",
     ],
   },
-  WebSockets: {
-    level: 5,
-    label: "Expert",
-    summary:
-      "Designed and implemented high-throughput realtime streaming for cloud services, desktop apps, and embedded devices.",
-    highlights: [
-      "Cloud-based telemetry streaming at high data rates",
-      "WebSocket implementations in Go, TypeScript, and C/C++",
-      "Embedded device ↔ cloud ↔ UI streaming architectures",
-      "Connection lifecycle management, backpressure, and reconnection strategies",
-      "WebRTC data channels for low-latency transport",
-    ],
-  },
   Webservers: {
     level: 5,
     label: "Expert",
@@ -209,14 +207,14 @@ export const skillDetails: Record<string, SkillDetail> = {
     ],
   },
   "UX/UI Design": {
-    level: 3,
-    label: "Proficient",
+    level: 4,
+    label: "Advanced",
     summary:
       "Self-taught UI/UX design focused on clarity, usability, and data-dense interfaces.",
     highlights: [
       "Strong visual intuition and layout hierarchy",
       "Dashboard and tooling UX for complex, real-time data",
-      "Experience applying Material Design, Bootstrap, and neobrutalist systems",
+      "Experience applying Material Design, Bootstrap, framer motion and shadcn/ui",
       "Consistent, accessible component and interaction patterns",
     ],
   },

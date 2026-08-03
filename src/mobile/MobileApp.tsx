@@ -62,9 +62,10 @@ const MobileApp = () => {
           </div>
         </div>
         <p className="mobile-summary">
-          Embedded systems engineer focused on resilient firmware, robotics, and
-          front-end tooling that makes complex hardware intuitive. Open to
-          remote roles across embedded, front-end, and back-end work.
+          I build software for complex, real-time products: from clear UIs to
+          embedded and robotics firmware. That cross-domain view helps me
+          connect hardware, data, and interface into one coherent product.
+          Seeking remote roles across front-end, back-end, and embedded/robotics.
         </p>
         <div className="profile-socials">
           <a href="https://github.com/pbassett1996/" aria-label="GitHub">
@@ -87,14 +88,14 @@ const MobileApp = () => {
           </a>
         </div>
         <div className="mobile-actions">
-          <a 
-            href="?resume&autoPrint=true" 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href="?resume&autoPrint=true"
+            target="_blank"
+            rel="noreferrer"
             className="mobile-btn-primary"
             onClick={(e) => {
               e.preventDefault();
-              window.open('?resume&autoPrint=true', '_blank');
+              window.open("?resume&autoPrint=true", "_blank");
             }}
           >
             Download CV
@@ -116,19 +117,23 @@ const MobileApp = () => {
                   <p className="mobile-meta">{item.timeframe}</p>
                 </div>
                 <p className="mobile-experience-desc">{item.description}</p>
-                
+
                 {item.roles && (
                   <div className="mobile-role-progression">
                     {item.roles.map((role, idx) => (
                       <div key={role.title + idx} className="mobile-role-item">
                         <div className="mobile-role-marker">
                           <span className="mobile-role-dot" />
-                          {idx < item.roles!.length - 1 && <span className="mobile-role-line" />}
+                          {idx < item.roles!.length - 1 && (
+                            <span className="mobile-role-line" />
+                          )}
                         </div>
                         <div className="mobile-role-content">
                           <div className="mobile-role-header">
                             <h4>{role.title}</h4>
-                            <span className="mobile-role-time">{role.timeframe}</span>
+                            <span className="mobile-role-time">
+                              {role.timeframe}
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -203,7 +208,7 @@ const MobileApp = () => {
           <div className="mobile-contact-details">
             <div className="mobile-contact-detail">
               <strong>Location:</strong>
-              <p>Broulee, Australia (Open to remote)</p>
+              <p>Broulee, Australia (Remote)</p>
             </div>
             <div className="mobile-contact-detail mobile-contact-detail-email">
               <strong>Email:</strong>

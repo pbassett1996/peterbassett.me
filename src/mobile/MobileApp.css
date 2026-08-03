@@ -68,14 +68,14 @@
 
 .mobile-avatar {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   --splatter-radius: 46% 54% 62% 38% / 54% 46% 54% 46%;
   border-radius: var(--splatter-radius);
   clip-path: inset(0 round var(--splatter-radius));
   display: grid;
   place-items: center;
-  padding: 0.4rem;
+  padding: 0.6rem;
   justify-self: center;
 }
 
@@ -105,6 +105,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  transform: scale(0.88) translateY(-10%);
   border-radius: var(--splatter-radius);
   position: relative;
   z-index: 1;

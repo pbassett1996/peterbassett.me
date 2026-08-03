@@ -17,12 +17,12 @@ const HomeSection = () => {
             <span>Senior Embedded Software Engineer</span>
           </h1>
           <p className="lead">
-            I design resilient embedded and robotic systems with front-end
-            experiences that make complex hardware intuitive. I specialise in
-            taking products from prototype to production by aligning firmware,
-            hardware, and user-facing tools, with a focus on reliability,
-            performance, and clear operator experiences. I’m seeking remote
-            roles across embedded, front-end, and back-end domains.
+            I build software for complex, real-time products. From UIs that make
+            dense systems feel simple, to embedded and robotics firmware that
+            performs under real-world constraints. Working across those domains
+            gives me a rare ability to connect hardware, data, and interface into
+            one coherent product. I’m seeking remote roles across front-end,
+            back-end, and embedded/robotics.
           </p>
           <div className="profile-socials">
             <a href="https://github.com/pbassett1996/" aria-label="GitHub">

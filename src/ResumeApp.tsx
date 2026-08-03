@@ -41,7 +41,8 @@ const ResumeApp = () => {
                   <img src={githubIcon} alt="" /> github.com/pbassett1996
                 </div>
                 <div className="header-link-item">
-                  <img src={linkedinIcon} alt="" /> linkedin.com/in/peter-bassett
+                  <img src={linkedinIcon} alt="" />{" "}
+                  linkedin.com/in/peter-bassett
                 </div>
               </div>
             </div>
@@ -52,8 +53,10 @@ const ResumeApp = () => {
             </div>
           </div>
           <p className="professional-summary">
-            Embedded systems engineer focused on resilient firmware, robotics, and
-            front-end tooling that makes complex hardware intuitive. Specialist in take products from prototype to production by aligning firmware, hardware, and user-facing tools.
+            Embedded systems engineer focused on resilient firmware, robotics,
+            and front-end tooling that makes complex hardware intuitive.
+            Specialist in take products from prototype to production by aligning
+            firmware, hardware, and user-facing tools.
           </p>
         </header>
 

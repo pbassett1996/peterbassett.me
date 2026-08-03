@@ -1,6 +1,7 @@
 .service-card {
   min-height: 320px;
   justify-items: center;
+  align-content: center;
   text-align: center;
 }
 
@@ -23,28 +24,6 @@
 .service-card-dominant {
   min-height: 360px;
   background: #ffe29a;
-}
-
-.service-icon {
-  width: 80px;
-  height: 80px;
-  border: 3px solid #111111;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  font-size: 2.2rem;
-  background: #ffffff;
-  box-shadow: 4px 4px 0 #111111;
-}
-
-.service-stamp {
-  border-radius: 12px;
-  transform: rotate(-6deg);
-  box-shadow: 4px 4px 0 #111111, 6px 6px 0 #f9c0e7;
-}
-
-.service-grid .service-card:nth-child(2) .service-stamp {
-  transform: rotate(5deg);
 }
 
 .section-card h3 {
